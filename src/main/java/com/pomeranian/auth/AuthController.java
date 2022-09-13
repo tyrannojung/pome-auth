@@ -27,7 +27,7 @@ public class AuthController {
 	public ModelAndView pomeWebAuth(
 			Locale locale
 			) {
-		ModelAndView modelAndView = new ModelAndView("index");
+		ModelAndView modelAndView = new ModelAndView("/auth/popup");
 		
 		return modelAndView;
 		
