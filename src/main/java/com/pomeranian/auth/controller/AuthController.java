@@ -1,4 +1,4 @@
-package com.pomeranian.auth;
+package com.pomeranian.auth.controller;
 
 import java.util.Locale;
 
