@@ -11,6 +11,7 @@
 <link rel="stylesheet" href="/common/bootstrap/bootstrap-4.6.1.css">
 <link rel="stylesheet" href="/common/bootstrap/font-awesome-4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/js/main.js">
 <script src="/common/jquery/jquery-3.6.0.js"></script>
 <script src="/common/bootstrap/poper-1.16.1.js"></script>
 <script src="/common/bootstrap/bootstrap-4.6.1.js"></script>

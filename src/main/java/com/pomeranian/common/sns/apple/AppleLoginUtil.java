@@ -22,8 +22,6 @@ import org.apache.http.util.EntityUtils;
 import org.bouncycastle.util.io.pem.PemObject;
 import org.bouncycastle.util.io.pem.PemReader;
 import org.json.JSONObject;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Component;
@@ -37,12 +35,10 @@ import com.nimbusds.jwt.JWTClaimsSet;
 import com.nimbusds.jwt.ReadOnlyJWTClaimsSet;
 import com.nimbusds.jwt.SignedJWT;
 
-import kr.ne.abc.template.admin.controller.AdminController;
 import sun.security.ec.ECPrivateKeyImpl;
 
 @Component
 public class AppleLoginUtil {
-		private static final Logger logger = LoggerFactory.getLogger(AdminController.class);
 
 	    public String createClientSecret(String teamId, String clientId, String keyId, String keyPath, String authUrl) {
 
@@ -124,7 +120,7 @@ public class AppleLoginUtil {
 	            result = EntityUtils.toString(entity, "UTF-8");
 
 	            if (statusCode != 200) {
-	                logger.error("[error] : " + result);
+	            	System.out.println("[error] : " + result);
 	                
 	            }
 	            EntityUtils.consume(entity);

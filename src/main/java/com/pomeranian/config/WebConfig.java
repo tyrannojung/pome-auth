@@ -14,12 +14,6 @@ public class WebConfig implements WebMvcConfigurer {
 	@Value("${google.client.id}")
     private String googleClientId;
 	
-	@Value("${google.auth.url}")
-    private String googleAuthUrl;
-	
-	@Value("${google.login.url}")
-    private String googleLoginUrl;
-	
 	@Value("${google.secret}")
     private String googleSecret;
 	
@@ -46,14 +40,6 @@ public class WebConfig implements WebMvcConfigurer {
     
 	public String getGoogleClientId() {
 		return googleClientId;
-	}
-	
-	public String getGoogleAuthUrl() {
-		return googleAuthUrl;
-	}
-	
-	public String getGoogleLoginUrl() {
-		return googleLoginUrl;
 	}
 	
 	public String getGoogleSecret() {

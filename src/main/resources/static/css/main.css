@@ -1,7 +1,7 @@
 /*
 *
 * ==========================================
-* CUSTOM UTIL CLASSES
+* Bootstrap tempalte
 * ==========================================
 *
 */
@@ -64,15 +64,16 @@
 .social-link-gradient.social-wechat {
     background: linear-gradient(to right, #04C259, #53AA47);
 }		
-		
+
+
 /*
 *
 * ==========================================
-* FOR DEMO PURPOSES
+* custom css
 * ==========================================
 *
 */
-body {
+.popup_body {
     min-height: 100vh;
     background-color: #e8cbc0;
     background-image: linear-gradient(147deg, #e8cbc0 0%, #636fa4 100%);
@@ -83,4 +84,50 @@ body {
 .sub-color {
     background-color: #E6987A;
     background-image: linear-gradient(147deg, #CFD3E6 0%, #E6987A 100%);
+}
+
+.blockquote-custom {
+  position: relative;
+  font-size: 1.1rem;
+}
+
+.blockquote-custom-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: -25px;
+  left: 50px;
+}
+
+.iframe_custom {
+	width: 400px;
+	height: 800px;
+	left: 50%;
+	top: 50%;
+	position: absolute;
+	transform: translate(-50%, -50%);
+}
+
+.login_back {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999999999;
+}
+.loading{
+	width:100%;
+	height:100%;
+	background:rgba(0,0,0,.7);
+	position:absolute;
+	left:0;
+	top:0;
+	z-index:333;
+	display:none;
 }
