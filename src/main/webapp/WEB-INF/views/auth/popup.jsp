@@ -40,9 +40,6 @@
 	                        <li class="mb-2">
 	                            <!-- Facebook--><a href="javascript:void(0);" class="social-link social-facebook d-flex align-items-center py-2 rounded-pill shadow-sm" onclick="facebook_login();"><span class="icon py-1"><i class="fa fa-facebook-f fa-fw"></i></span><span class="font-weight-bold">Login with Facebook</span></a>
 	                        </li>
-	                       	<li class="mb-2">
-	                            <!-- Wechat --><a href=" javascript:void(0);" class="social-link social-wechat d-flex align-items-center py-2 rounded-pill shadow-sm" onclick="wechat_login();"><span class="icon py-1"><i class="fa fa-wechat fa-fw"></i></span><span class="font-weight-bold">Login with Wechat</span></a>
-	                        </li>
 	                    </ul>
 	                </div>
 	            </div>
@@ -50,32 +47,31 @@
 	    </div>
 	</div>
 <script>
+
+//부모팝업 닫기
 function close_popup(){
 	parent.closeIFrame();
 	
 }
 
 function google_login(){
-	console.log('google');
-	console.log('${googleOauthUrl})');
-	window.open('${googleOauthUrl}', "a", "width=400, height=800, left=100, top=50");
+	window.name = "parentForm";
+	window.open('${googleOauthUrl}', "childForm", "width=400, height=750, left=100, top=50");
 	
 }
 
 function apple_login(){
-	console.log('apple');
-	
+	window.name = "parentForm";
+	window.open('${appleOauthUrl}', "childForm", "width=400, height=750, left=100, top=50");
+
 }
 
 function facebook_login(){
-	console.log('facebook');
+	window.name = "parentForm";
+	window.open('${facebookOauthUrl}', "childForm", "width=400, height=750, left=100, top=50");
 	
 }
 
-function wechat_login(){
-	console.log('wechat');
-	
-}
 </script>
 </body>
 </html>

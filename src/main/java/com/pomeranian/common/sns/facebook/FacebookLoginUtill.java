@@ -101,7 +101,7 @@ public class FacebookLoginUtill {
 	 * @return
 	 */
     public HashMap<String, Object> getUserInfo (String access_Token) {
-        //    요청하는 클라이언트마다 가진 정보가 다를 수 있기에 HashMap타입으로 선언
+        // 요청하는 클라이언트마다 가진 정보가 다를 수 있기에 HashMap타입으로 선언
         HashMap<String, Object> userInfo = new HashMap<>();
         String reqURL = "https://graph.facebook.com/me?fields=id,name,email";
         try {
@@ -109,14 +109,10 @@ public class FacebookLoginUtill {
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
             conn.setRequestMethod("GET");
 
-            //    요청에 필요한 Header에 포함될 내용
+            // 요청에 필요한 Header에 포함될 내용
             conn.setRequestProperty("Authorization", "Bearer " + access_Token);
-
             int responseCode = conn.getResponseCode();
-            System.out.println("responseCode : " + responseCode);
-
             BufferedReader br = new BufferedReader(new InputStreamReader(conn.getInputStream()));
-            
             String line = "";
             String result = "";
 
@@ -125,14 +121,19 @@ public class FacebookLoginUtill {
             }
             
             JSONObject facebookInfo =  new JSONObject(result);
-            
             String name = facebookInfo.getString("name");
             String id = facebookInfo.getString("id");
-            String email = facebookInfo.getString("email");
+            
+            // 예전에 가입한사람은 이메일제공을 안해주는경우가 있어 방어코드
+            if(facebookInfo.has("email")) {
+                String email = facebookInfo.getString("email");
+                userInfo.put("email", email);
+            	
+            }
             
             userInfo.put("name", name);
             userInfo.put("id", id);
-            userInfo.put("email", email);
+            
             
         } catch (IOException e) {
         	//e.printStackTrace();

@@ -46,7 +46,7 @@ public class GoogleController {
 		//String domain = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort(); // http://localhost:8080
 		String domain = request.getScheme()+"://"+request.getServerName(); // http://localhost	
 		
-		ModelAndView mav = new ModelAndView("/member/signin");
+		ModelAndView mav = new ModelAndView("/member/signup");
 		
 		//HTTP Request를 위한 RestTemplate
 		RestTemplate restTemplate = new RestTemplate();
@@ -85,7 +85,7 @@ public class GoogleController {
         System.out.println(email + ", " + google_id);
         System.out.println(googleInfo);
         
-        
+        mav.addObject("userInfo", googleInfo);
         return mav;
         
 	}

@@ -35,7 +35,7 @@ public class FacebookController {
 			HttpSession session
 			, @RequestParam(value = "code", required = false) String code) throws Exception {
 		
-		ModelAndView mav = new ModelAndView("/member/signin");
+		ModelAndView mav = new ModelAndView("/member/signup");
 
         String access_Token = facebookLoginUtill.getAccessToken(code);
         HashMap<String, Object> userInfo = facebookLoginUtill.getUserInfo(access_Token);
@@ -44,7 +44,7 @@ public class FacebookController {
 //        String email = facebookInfo.getString("email");
 //        String facebook_id = facebookInfo.getString("id");
         
-        System.out.println(facebookInfo);
+        mav.addObject("userInfo", facebookInfo);
         
         return mav;
         

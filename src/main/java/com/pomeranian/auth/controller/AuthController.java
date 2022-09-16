@@ -24,6 +24,12 @@ public class AuthController {
 	@Autowired
 	private WebConfig webConfig;
 	
+	/**
+	 * pomeWebAuth
+	 * @param locale
+	 * @param request
+	 * @return
+	 */
 	@GetMapping(value="/run")
 	public ModelAndView pomeWebAuth(
 			Locale locale

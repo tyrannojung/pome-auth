@@ -46,7 +46,7 @@ public class AppleController {
 			, @RequestParam(value = "code", required= false) String code
 			, HttpServletResponse response) throws Exception {
 		
-		ModelAndView mav = new ModelAndView("/member/signin");
+		ModelAndView mav = new ModelAndView("/member/signup");
 		
 		// 애플로그인 취소시 로그인페이지로 이동
 		if(code == null) {
@@ -67,17 +67,9 @@ public class AppleController {
 	    String apiResponse = appleLoginUtil.doPost(reqUrl, tokenRequest);
 	    JSONObject tokenResponse = new JSONObject(apiResponse);
         JSONObject appleInfo = appleLoginUtil.decodeFromIdToken(tokenResponse.getString("id_token"));
-        
         System.out.println(appleInfo);
+        mav.addObject("userInfo", appleInfo);
         
-        if(appleInfo.has("is_private_email")) {
-        	mav.addObject("appleInfo", appleInfo);
-        	
-        } else {
-        	String email = appleInfo.get("email").toString();
-        	String apple_id = appleInfo.get("sub").toString();
-            
-    	}
         return mav;
 	}
 }

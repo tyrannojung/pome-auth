@@ -35,3 +35,4 @@ out/
 .vscode/
 
 *.log
+src/main/resources/static/common/sns/apple/AuthKey_VMC7SWGQNR.p8
