@@ -5,7 +5,7 @@
 <br>
 
 ## 💡 Introduction
-- (https://pome.nodehome.io/)
+- https://pome.nodehome.io/
 
 ## 과제 목표
 
