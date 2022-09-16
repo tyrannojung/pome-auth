@@ -20,5 +20,6 @@
 ## 사용하기
 
 ```bash
-npm start
+/src/main/resources/application-private.properties
+해당 경로에서 구글,페이스북,애플 로그인에 필요한 값들을 넣어주고 사용한다.
 ```
