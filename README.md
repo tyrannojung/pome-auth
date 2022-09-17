@@ -14,7 +14,7 @@
 ## 요구 사항
 
 - Oauth2.0 - java-spring rest
-- ogin page를 iframe을 사용하여 호출
+- Login page를 iframe을 사용하여 호출
 - 로그인 완료 후 하단에서 데이터 조회가능
 
 ## 사용하기
