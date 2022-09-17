@@ -24,7 +24,7 @@
 ```
 - 해당 경로에서 구글,페이스북,애플 로그인에 필요한 값들을 넣어주고 사용한다.
 - 추후 application-private.properties는 ignore 처리한다.
-
+- 예시
 
 ![화면 캡처 2022-09-16 180721](https://user-images.githubusercontent.com/58019931/190601557-3e651a9d-599c-43f6-b128-8d38f53a0f60.png)
 
