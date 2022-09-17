@@ -1,6 +1,6 @@
 # 🙋‍♂️ Pome-Auth - Oauth 2.0 인증
 
-![ttt mov](https://user-images.githubusercontent.com/14071105/85921684-d6797a00-b8b8-11ea-8fc4-5dd0f539bb5b.gif)
+![ezgif-3-6c131d896e](https://user-images.githubusercontent.com/58019931/190844382-5337238c-2a6c-47d0-a5cc-7a74d2f6b3b5.gif)
 
 <br>
 
