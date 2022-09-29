@@ -5,7 +5,7 @@
 <br>
 
 ## 💡 Introduction
-- iframe을 활용한 
+- iframe을 활용한 모듈 소셜로그인
 
 ## 과제 목표
 
